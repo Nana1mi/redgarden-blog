@@ -3,6 +3,23 @@
   title = 'RedGarden 博客'
   theme = 'ananke'
 
+  [menu]
+    [[menu.main]]
+      name = '首页'
+      url = '/'
+      weight = 1
+    [[menu.main]]
+      name = '文章'
+      url = '/posts/'
+      weight = 2
+    [[menu.main]]
+      name = '关于我'
+      url = '/about/'
+      weight = 3
+
   [taxonomies]
     tag = 'tags'
     category = 'categories'
+
+  [permalinks]
+    posts = '/posts/:filename/'
