@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=10668&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=5870&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -37,18 +37,18 @@
     
 
     
-      <link rel="canonical" href="http://localhost:10668/tags/">
+      <link rel="canonical" href="http://localhost:5870/tags/">
     
 
-    <meta property="og:url" content="http://localhost:10668/tags/">
+    <meta property="og:url" content="http://localhost:5870/tags/">
   <meta property="og:site_name" content="RedGarden 博客">
   <meta property="og:title" content="Tags">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Tags">
-  <meta itemprop="datePublished" content="2025-01-01T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-01-01T00:00:00+00:00">
+  <meta itemprop="datePublished" content="2025-01-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-01-02T00:00:00+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tags">
 
@@ -69,6 +69,28 @@
     <div class="flex-l items-center">
       
 
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="文章 page">
+              文章
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/about/" title="关于我 page">
+              关于我
+            </a>
+          </li>
+          
+        </ul>
       
       <div class="ananke-socials"></div>
 
@@ -107,6 +129,182 @@
   <div class="mb3 pa4 gray overflow-hidden bg-white">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/how-to-write-blog/" class="link black dim">
+        如何在我的博客上写文章：一篇完整的指南
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="如何在我的博客上写文章一篇完整的指南">如何在我的博客上写文章：一篇完整的指南</h1>
+<p>欢迎来到我的博客！如果你也想在这里分享你的想法、技术笔记或生活感悟，这篇文章将告诉你如何操作。</p>
+<h2 id="-为什么选择静态博客">🎯 为什么选择静态博客？</h2>
+<p>在开始之前，我想分享一下为什么选择Hugo + GitHub Pages这种方案：</p>
+<h3 id="优点">优点</h3>
+<ol>
+<li><strong>速度快</strong> - 静态页面，毫秒级加载</li>
+<li><strong>成本低</strong> - 完全免费，只需一个域名</li>
+<li><strong>安全可靠</strong> - 不需要服务器，避免被攻击</li>
+<li><strong>版本控制</strong> - 所有内容在Git中管理</li>
+<li><strong>SEO友好</strong> - 搜索引擎喜欢静态页面</li>
+</ol>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li>需要学习Markdown语法</li>
+<li>需要基本的Git操作</li>
+<li>无法使用动态功能（如评论系统，需借助第三方）</li>
+</ul>
+<h2 id="-写文章的基本流程">📝 写文章的基本流程</h2>
+<h3 id="第1步创建文章文件">第1步：创建文章文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 在PowerShell中，进入博客目录</span>
+</span></span><span style="display:flex;"><span>cd D:\my blog\redgarden-blog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建新文章（文件名不要有空格）</span>
+</span></span><span style="display:flex;"><span>hugo new posts/my-first-article.md
+</span></span></code></pre></div><h3 id="第2步编写文章内容">第2步：编写文章内容</h3>
+<p>打开刚创建的文件，你会看到这样的头部（Front Matter）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;我的文章标题&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-01-02</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># true表示草稿，false表示发布</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;标签1&#34;</span>, <span style="color:#e6db74">&#34;标签2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;分类&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>然后在下方写Markdown内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 文章标题
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这里是正文内容。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 小标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**加粗文字**</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体文字*</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`代码片段`</span>
+</span></span></code></pre></div><h3 id="第3步本地预览">第3步：本地预览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 启动开发服务器</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 然后访问 http://localhost:1313 查看效果</span>
+</span></span></code></pre></div><h3 id="第4步发布文章">第4步：发布文章</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. 将draft改为false（或者直接删除这行）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 提交并推送</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;添加新文章：我的第一篇文章&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 等待1-2分钟，GitHub Actions会自动部署</span>
+</span></span></code></pre></div><h2 id="-markdown语法快速入门">✨ Markdown语法快速入门</h2>
+<h3 id="标题">标题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 一级标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 三级标题
+</span></span></span></code></pre></div><h3 id="文本格式">文本格式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**粗体**
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体*</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`行内代码`</span>
+</span></span></code></pre></div><h3 id="列表">列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 有序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 有序列表项2
+</span></span></code></pre></div><h3 id="链接和图片">链接和图片</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">图片描述</span>](<span style="color:#a6e22e">/images/pic.jpg</span>)
+</span></span></code></pre></div><h3 id="代码块">代码块</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```python
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><h2 id="-文章头部参数说明">🎨 文章头部参数说明</h2>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>title</td>
+          <td>文章标题</td>
+          <td>&ldquo;我的第一篇文章&rdquo;</td>
+      </tr>
+      <tr>
+          <td>date</td>
+          <td>发布时间</td>
+          <td>2025-01-02</td>
+      </tr>
+      <tr>
+          <td>draft</td>
+          <td>是否草稿</td>
+          <td>true/false</td>
+      </tr>
+      <tr>
+          <td>tags</td>
+          <td>标签列表</td>
+          <td>[&ldquo;技术&rdquo;, &ldquo;教程&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>categories</td>
+          <td>分类列表</td>
+          <td>[&ldquo;技术分享&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>featured_image</td>
+          <td>特色图片</td>
+          <td>&ldquo;/images/post.jpg&rdquo;</td>
+      </tr>
+      <tr>
+          <td>description</td>
+          <td>文章摘要</td>
+          <td>&ldquo;这是一篇文章的描述&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-高级技巧">🔧 高级技巧</h2>
+<h3 id="1-添加目录">1. 添加目录</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[TOC]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 标题1
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 标题2
+</span></span></span></code></pre></div><h3 id="2-引用">2. 引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">这是一个引用
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">可以多行显示
+</span></span></span></code></pre></div><h3 id="3-分隔线">3. 分隔线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="4-删除线">4. 删除线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>~~这是删除线~~
+</span></span></code></pre></div><h2 id="-常用资源">📚 常用资源</h2>
+<h3 id="markdown编辑器推荐">Markdown编辑器推荐</h3>
+<ul>
+<li><strong>VS Code</strong> - 我正在使用的，功能强大</li>
+<li><strong>Typora</strong> - 所见即所得的Markdown编辑器</li>
+<li><strong>Notion</strong> - 在线协作工具</li>
+</ul>
+<h3 id="学习资源">学习资源</h3>
+<ul>
+<li><a href="https://www.markdownguide.org/">Markdown语法指南</a></li>
+<li><a href="https://gohugo.io/documentation/">Hugo文档</a></li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions教程</a></li>
+</ul>
+<h2 id="-开始你的博客之旅">🎉 开始你的博客之旅</h2>
+<p>现在你已经掌握了写博客的基本技能，赶快开始写你的第一篇文章吧！</p>
+    </div>
+    <a href="/posts/how-to-write-blog/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/my-first-post/" class="link black dim">
         我的第一篇博客文章
       </a>
@@ -135,10 +333,369 @@
         
       
         <h2 class="f1">
+          <a href="/tags/markdown/" class="link blue hover-black">
+            Tag: Markdown
+          </a>
+        </h2>
+        
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/how-to-write-blog/" class="link black dim">
+        如何在我的博客上写文章：一篇完整的指南
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="如何在我的博客上写文章一篇完整的指南">如何在我的博客上写文章：一篇完整的指南</h1>
+<p>欢迎来到我的博客！如果你也想在这里分享你的想法、技术笔记或生活感悟，这篇文章将告诉你如何操作。</p>
+<h2 id="-为什么选择静态博客">🎯 为什么选择静态博客？</h2>
+<p>在开始之前，我想分享一下为什么选择Hugo + GitHub Pages这种方案：</p>
+<h3 id="优点">优点</h3>
+<ol>
+<li><strong>速度快</strong> - 静态页面，毫秒级加载</li>
+<li><strong>成本低</strong> - 完全免费，只需一个域名</li>
+<li><strong>安全可靠</strong> - 不需要服务器，避免被攻击</li>
+<li><strong>版本控制</strong> - 所有内容在Git中管理</li>
+<li><strong>SEO友好</strong> - 搜索引擎喜欢静态页面</li>
+</ol>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li>需要学习Markdown语法</li>
+<li>需要基本的Git操作</li>
+<li>无法使用动态功能（如评论系统，需借助第三方）</li>
+</ul>
+<h2 id="-写文章的基本流程">📝 写文章的基本流程</h2>
+<h3 id="第1步创建文章文件">第1步：创建文章文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 在PowerShell中，进入博客目录</span>
+</span></span><span style="display:flex;"><span>cd D:\my blog\redgarden-blog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建新文章（文件名不要有空格）</span>
+</span></span><span style="display:flex;"><span>hugo new posts/my-first-article.md
+</span></span></code></pre></div><h3 id="第2步编写文章内容">第2步：编写文章内容</h3>
+<p>打开刚创建的文件，你会看到这样的头部（Front Matter）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;我的文章标题&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-01-02</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># true表示草稿，false表示发布</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;标签1&#34;</span>, <span style="color:#e6db74">&#34;标签2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;分类&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>然后在下方写Markdown内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 文章标题
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这里是正文内容。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 小标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**加粗文字**</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体文字*</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`代码片段`</span>
+</span></span></code></pre></div><h3 id="第3步本地预览">第3步：本地预览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 启动开发服务器</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 然后访问 http://localhost:1313 查看效果</span>
+</span></span></code></pre></div><h3 id="第4步发布文章">第4步：发布文章</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. 将draft改为false（或者直接删除这行）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 提交并推送</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;添加新文章：我的第一篇文章&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 等待1-2分钟，GitHub Actions会自动部署</span>
+</span></span></code></pre></div><h2 id="-markdown语法快速入门">✨ Markdown语法快速入门</h2>
+<h3 id="标题">标题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 一级标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 三级标题
+</span></span></span></code></pre></div><h3 id="文本格式">文本格式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**粗体**
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体*</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`行内代码`</span>
+</span></span></code></pre></div><h3 id="列表">列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 有序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 有序列表项2
+</span></span></code></pre></div><h3 id="链接和图片">链接和图片</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">图片描述</span>](<span style="color:#a6e22e">/images/pic.jpg</span>)
+</span></span></code></pre></div><h3 id="代码块">代码块</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```python
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><h2 id="-文章头部参数说明">🎨 文章头部参数说明</h2>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>title</td>
+          <td>文章标题</td>
+          <td>&ldquo;我的第一篇文章&rdquo;</td>
+      </tr>
+      <tr>
+          <td>date</td>
+          <td>发布时间</td>
+          <td>2025-01-02</td>
+      </tr>
+      <tr>
+          <td>draft</td>
+          <td>是否草稿</td>
+          <td>true/false</td>
+      </tr>
+      <tr>
+          <td>tags</td>
+          <td>标签列表</td>
+          <td>[&ldquo;技术&rdquo;, &ldquo;教程&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>categories</td>
+          <td>分类列表</td>
+          <td>[&ldquo;技术分享&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>featured_image</td>
+          <td>特色图片</td>
+          <td>&ldquo;/images/post.jpg&rdquo;</td>
+      </tr>
+      <tr>
+          <td>description</td>
+          <td>文章摘要</td>
+          <td>&ldquo;这是一篇文章的描述&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-高级技巧">🔧 高级技巧</h2>
+<h3 id="1-添加目录">1. 添加目录</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[TOC]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 标题1
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 标题2
+</span></span></span></code></pre></div><h3 id="2-引用">2. 引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">这是一个引用
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">可以多行显示
+</span></span></span></code></pre></div><h3 id="3-分隔线">3. 分隔线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="4-删除线">4. 删除线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>~~这是删除线~~
+</span></span></code></pre></div><h2 id="-常用资源">📚 常用资源</h2>
+<h3 id="markdown编辑器推荐">Markdown编辑器推荐</h3>
+<ul>
+<li><strong>VS Code</strong> - 我正在使用的，功能强大</li>
+<li><strong>Typora</strong> - 所见即所得的Markdown编辑器</li>
+<li><strong>Notion</strong> - 在线协作工具</li>
+</ul>
+<h3 id="学习资源">学习资源</h3>
+<ul>
+<li><a href="https://www.markdownguide.org/">Markdown语法指南</a></li>
+<li><a href="https://gohugo.io/documentation/">Hugo文档</a></li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions教程</a></li>
+</ul>
+<h2 id="-开始你的博客之旅">🎉 开始你的博客之旅</h2>
+<p>现在你已经掌握了写博客的基本技能，赶快开始写你的第一篇文章吧！</p>
+    </div>
+    <a href="/posts/how-to-write-blog/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
           <a href="/tags/%E5%8D%9A%E5%AE%A2/" class="link blue hover-black">
             Tag: 博客
           </a>
         </h2>
+        
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/how-to-write-blog/" class="link black dim">
+        如何在我的博客上写文章：一篇完整的指南
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="如何在我的博客上写文章一篇完整的指南">如何在我的博客上写文章：一篇完整的指南</h1>
+<p>欢迎来到我的博客！如果你也想在这里分享你的想法、技术笔记或生活感悟，这篇文章将告诉你如何操作。</p>
+<h2 id="-为什么选择静态博客">🎯 为什么选择静态博客？</h2>
+<p>在开始之前，我想分享一下为什么选择Hugo + GitHub Pages这种方案：</p>
+<h3 id="优点">优点</h3>
+<ol>
+<li><strong>速度快</strong> - 静态页面，毫秒级加载</li>
+<li><strong>成本低</strong> - 完全免费，只需一个域名</li>
+<li><strong>安全可靠</strong> - 不需要服务器，避免被攻击</li>
+<li><strong>版本控制</strong> - 所有内容在Git中管理</li>
+<li><strong>SEO友好</strong> - 搜索引擎喜欢静态页面</li>
+</ol>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li>需要学习Markdown语法</li>
+<li>需要基本的Git操作</li>
+<li>无法使用动态功能（如评论系统，需借助第三方）</li>
+</ul>
+<h2 id="-写文章的基本流程">📝 写文章的基本流程</h2>
+<h3 id="第1步创建文章文件">第1步：创建文章文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 在PowerShell中，进入博客目录</span>
+</span></span><span style="display:flex;"><span>cd D:\my blog\redgarden-blog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建新文章（文件名不要有空格）</span>
+</span></span><span style="display:flex;"><span>hugo new posts/my-first-article.md
+</span></span></code></pre></div><h3 id="第2步编写文章内容">第2步：编写文章内容</h3>
+<p>打开刚创建的文件，你会看到这样的头部（Front Matter）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;我的文章标题&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-01-02</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># true表示草稿，false表示发布</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;标签1&#34;</span>, <span style="color:#e6db74">&#34;标签2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;分类&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>然后在下方写Markdown内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 文章标题
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这里是正文内容。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 小标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**加粗文字**</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体文字*</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`代码片段`</span>
+</span></span></code></pre></div><h3 id="第3步本地预览">第3步：本地预览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 启动开发服务器</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 然后访问 http://localhost:1313 查看效果</span>
+</span></span></code></pre></div><h3 id="第4步发布文章">第4步：发布文章</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. 将draft改为false（或者直接删除这行）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 提交并推送</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;添加新文章：我的第一篇文章&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 等待1-2分钟，GitHub Actions会自动部署</span>
+</span></span></code></pre></div><h2 id="-markdown语法快速入门">✨ Markdown语法快速入门</h2>
+<h3 id="标题">标题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 一级标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 三级标题
+</span></span></span></code></pre></div><h3 id="文本格式">文本格式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**粗体**
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体*</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`行内代码`</span>
+</span></span></code></pre></div><h3 id="列表">列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 有序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 有序列表项2
+</span></span></code></pre></div><h3 id="链接和图片">链接和图片</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">图片描述</span>](<span style="color:#a6e22e">/images/pic.jpg</span>)
+</span></span></code></pre></div><h3 id="代码块">代码块</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```python
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><h2 id="-文章头部参数说明">🎨 文章头部参数说明</h2>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>title</td>
+          <td>文章标题</td>
+          <td>&ldquo;我的第一篇文章&rdquo;</td>
+      </tr>
+      <tr>
+          <td>date</td>
+          <td>发布时间</td>
+          <td>2025-01-02</td>
+      </tr>
+      <tr>
+          <td>draft</td>
+          <td>是否草稿</td>
+          <td>true/false</td>
+      </tr>
+      <tr>
+          <td>tags</td>
+          <td>标签列表</td>
+          <td>[&ldquo;技术&rdquo;, &ldquo;教程&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>categories</td>
+          <td>分类列表</td>
+          <td>[&ldquo;技术分享&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>featured_image</td>
+          <td>特色图片</td>
+          <td>&ldquo;/images/post.jpg&rdquo;</td>
+      </tr>
+      <tr>
+          <td>description</td>
+          <td>文章摘要</td>
+          <td>&ldquo;这是一篇文章的描述&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-高级技巧">🔧 高级技巧</h2>
+<h3 id="1-添加目录">1. 添加目录</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[TOC]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 标题1
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 标题2
+</span></span></span></code></pre></div><h3 id="2-引用">2. 引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">这是一个引用
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">可以多行显示
+</span></span></span></code></pre></div><h3 id="3-分隔线">3. 分隔线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="4-删除线">4. 删除线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>~~这是删除线~~
+</span></span></code></pre></div><h2 id="-常用资源">📚 常用资源</h2>
+<h3 id="markdown编辑器推荐">Markdown编辑器推荐</h3>
+<ul>
+<li><strong>VS Code</strong> - 我正在使用的，功能强大</li>
+<li><strong>Typora</strong> - 所见即所得的Markdown编辑器</li>
+<li><strong>Notion</strong> - 在线协作工具</li>
+</ul>
+<h3 id="学习资源">学习资源</h3>
+<ul>
+<li><a href="https://www.markdownguide.org/">Markdown语法指南</a></li>
+<li><a href="https://gohugo.io/documentation/">Hugo文档</a></li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions教程</a></li>
+</ul>
+<h2 id="-开始你的博客之旅">🎉 开始你的博客之旅</h2>
+<p>现在你已经掌握了写博客的基本技能，赶快开始写你的第一篇文章吧！</p>
+    </div>
+    <a href="/posts/how-to-write-blog/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
         
           <div class="w-100 mb4 nested-copy-line-height relative bg-white">
   <div class="mb3 pa4 gray overflow-hidden bg-white">
@@ -166,6 +723,189 @@
 <p>开始你的博客之旅吧！</p>
     </div>
     <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E6%95%99%E7%A8%8B/" class="link blue hover-black">
+            Tag: 教程
+          </a>
+        </h2>
+        
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/how-to-write-blog/" class="link black dim">
+        如何在我的博客上写文章：一篇完整的指南
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="如何在我的博客上写文章一篇完整的指南">如何在我的博客上写文章：一篇完整的指南</h1>
+<p>欢迎来到我的博客！如果你也想在这里分享你的想法、技术笔记或生活感悟，这篇文章将告诉你如何操作。</p>
+<h2 id="-为什么选择静态博客">🎯 为什么选择静态博客？</h2>
+<p>在开始之前，我想分享一下为什么选择Hugo + GitHub Pages这种方案：</p>
+<h3 id="优点">优点</h3>
+<ol>
+<li><strong>速度快</strong> - 静态页面，毫秒级加载</li>
+<li><strong>成本低</strong> - 完全免费，只需一个域名</li>
+<li><strong>安全可靠</strong> - 不需要服务器，避免被攻击</li>
+<li><strong>版本控制</strong> - 所有内容在Git中管理</li>
+<li><strong>SEO友好</strong> - 搜索引擎喜欢静态页面</li>
+</ol>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li>需要学习Markdown语法</li>
+<li>需要基本的Git操作</li>
+<li>无法使用动态功能（如评论系统，需借助第三方）</li>
+</ul>
+<h2 id="-写文章的基本流程">📝 写文章的基本流程</h2>
+<h3 id="第1步创建文章文件">第1步：创建文章文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 在PowerShell中，进入博客目录</span>
+</span></span><span style="display:flex;"><span>cd D:\my blog\redgarden-blog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 创建新文章（文件名不要有空格）</span>
+</span></span><span style="display:flex;"><span>hugo new posts/my-first-article.md
+</span></span></code></pre></div><h3 id="第2步编写文章内容">第2步：编写文章内容</h3>
+<p>打开刚创建的文件，你会看到这样的头部（Front Matter）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;我的文章标题&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-01-02</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># true表示草稿，false表示发布</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;标签1&#34;</span>, <span style="color:#e6db74">&#34;标签2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;分类&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>然后在下方写Markdown内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 文章标题
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这里是正文内容。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 小标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**加粗文字**</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体文字*</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`代码片段`</span>
+</span></span></code></pre></div><h3 id="第3步本地预览">第3步：本地预览</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 启动开发服务器</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 然后访问 http://localhost:1313 查看效果</span>
+</span></span></code></pre></div><h3 id="第4步发布文章">第4步：发布文章</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. 将draft改为false（或者直接删除这行）</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 提交并推送</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;添加新文章：我的第一篇文章&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 等待1-2分钟，GitHub Actions会自动部署</span>
+</span></span></code></pre></div><h2 id="-markdown语法快速入门">✨ Markdown语法快速入门</h2>
+<h3 id="标题">标题</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 一级标题
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 二级标题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### 三级标题
+</span></span></span></code></pre></div><h3 id="文本格式">文本格式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**粗体**
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*斜体*</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`行内代码`</span>
+</span></span></code></pre></div><h3 id="列表">列表</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 无序列表项2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 有序列表项1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 有序列表项2
+</span></span></code></pre></div><h3 id="链接和图片">链接和图片</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">链接文字</span>](<span style="color:#a6e22e">https://example.com</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">图片描述</span>](<span style="color:#a6e22e">/images/pic.jpg</span>)
+</span></span></code></pre></div><h3 id="代码块">代码块</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```python
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><h2 id="-文章头部参数说明">🎨 文章头部参数说明</h2>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>说明</th>
+          <th>示例</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>title</td>
+          <td>文章标题</td>
+          <td>&ldquo;我的第一篇文章&rdquo;</td>
+      </tr>
+      <tr>
+          <td>date</td>
+          <td>发布时间</td>
+          <td>2025-01-02</td>
+      </tr>
+      <tr>
+          <td>draft</td>
+          <td>是否草稿</td>
+          <td>true/false</td>
+      </tr>
+      <tr>
+          <td>tags</td>
+          <td>标签列表</td>
+          <td>[&ldquo;技术&rdquo;, &ldquo;教程&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>categories</td>
+          <td>分类列表</td>
+          <td>[&ldquo;技术分享&rdquo;]</td>
+      </tr>
+      <tr>
+          <td>featured_image</td>
+          <td>特色图片</td>
+          <td>&ldquo;/images/post.jpg&rdquo;</td>
+      </tr>
+      <tr>
+          <td>description</td>
+          <td>文章摘要</td>
+          <td>&ldquo;这是一篇文章的描述&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="-高级技巧">🔧 高级技巧</h2>
+<h3 id="1-添加目录">1. 添加目录</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[TOC]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 标题1
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 标题2
+</span></span></span></code></pre></div><h3 id="2-引用">2. 引用</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">这是一个引用
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">可以多行显示
+</span></span></span></code></pre></div><h3 id="3-分隔线">3. 分隔线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="4-删除线">4. 删除线</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>~~这是删除线~~
+</span></span></code></pre></div><h2 id="-常用资源">📚 常用资源</h2>
+<h3 id="markdown编辑器推荐">Markdown编辑器推荐</h3>
+<ul>
+<li><strong>VS Code</strong> - 我正在使用的，功能强大</li>
+<li><strong>Typora</strong> - 所见即所得的Markdown编辑器</li>
+<li><strong>Notion</strong> - 在线协作工具</li>
+</ul>
+<h3 id="学习资源">学习资源</h3>
+<ul>
+<li><a href="https://www.markdownguide.org/">Markdown语法指南</a></li>
+<li><a href="https://gohugo.io/documentation/">Hugo文档</a></li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions教程</a></li>
+</ul>
+<h2 id="-开始你的博客之旅">🎉 开始你的博客之旅</h2>
+<p>现在你已经掌握了写博客的基本技能，赶快开始写你的第一篇文章吧！</p>
+    </div>
+    <a href="/posts/how-to-write-blog/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -214,7 +954,7 @@
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:10668/" >
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:5870/" >
     &copy;  RedGarden 博客 2025 
   </a>
     <div><div class="ananke-socials"></div>

@@ -1,0 +1,49 @@
+/* 渐变背景选项 - 你可以选择其中一个使用 */
+
+/* 选项1: 紫色系渐变（当前使用） */
+.site-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* 选项2: 蓝色系渐变 */
+.site-header {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* 选项3: 绿松石渐变 */
+.site-header {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);
+}
+
+/* 选项4: 日落渐变 */
+.site-header {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #ec4899 100%);
+}
+
+/* 选项5: 深色科技风 */
+.site-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+/* 选项6: 彩虹渐变 */
+.site-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    animation: gradient 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 选项7: 柔和粉色渐变 */
+.site-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* 选项8: 海洋蓝渐变 */
+.site-header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
