@@ -1,0 +1,58 @@
+baseURL = 'https://redgarden.dpdns.org/'
+languageCode = 'zh-cn'
+title = 'RedGarden 博客'
+theme = 'ananke'
+
+# 网站描述
+description = '个人技术博客与生活随笔'
+
+# 作者信息
+[author]
+  name = '你的名字'
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = '首页'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 2
+  [[menu.main]]
+    identifier = 'about'
+    name = '关于我'
+    url = '/about/'
+    weight = 3
+
+# 参数配置
+[params]
+  date_format = '2006-01-02'
+  favicon = '/favicon.ico'
+  featured_image = '/images/default.jpg'
+  socialTwitter = ''
+  socialGithub = ''
+
+# 启用代码高亮
+pygmentsStyle = 'github'
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+
+# 分页设置
+paginate = 10
+
+# 草稿设置
+[frontmatter]
+  date = ['date', 'publishDate']
+  lastmod = ['lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
+  expiryDate = ['expiryDate']
+
+# 标签和分类
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+  author = 'authors'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on RedGarden 博客</title>
+    <link>http://localhost:10668/tags/hugo/</link>
+    <description>Recent content in Hugo on RedGarden 博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:10668/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一篇博客文章</title>
+      <link>http://localhost:10668/posts/my-first-post/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:10668/posts/my-first-post/</guid>
+      <description>&lt;h1 id=&#34;我的第一篇博客文章&#34;&gt;我的第一篇博客文章&lt;/h1&gt;&#xA;&lt;p&gt;欢迎来到我的博客！这是使用Hugo搭建的第一篇文章。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么选择hugo&#34;&gt;为什么选择Hugo？&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;速度快&lt;/strong&gt; - 静态网站，加载速度非常快&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;简单易用&lt;/strong&gt; - 基于Markdown写作&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;免费托管&lt;/strong&gt; - 使用GitHub Pages&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;接下来要做什么&#34;&gt;接下来要做什么？&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;配置更多主题&lt;/li&gt;&#xA;&lt;li&gt;添加更多内容&lt;/li&gt;&#xA;&lt;li&gt;部署到线上&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;开始你的博客之旅吧！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

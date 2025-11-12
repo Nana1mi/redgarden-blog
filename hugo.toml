@@ -1,0 +1,8 @@
+  baseURL = 'https://redgarden.dpdns.org/'
+  languageCode = 'zh-cn'
+  title = 'RedGarden 博客'
+  theme = 'ananke'
+
+  [taxonomies]
+    tag = 'tags'
+    category = 'categories'
